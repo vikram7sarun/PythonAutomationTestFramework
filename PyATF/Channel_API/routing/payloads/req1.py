@@ -7,3 +7,8 @@ postRequest2 = {
     "name": "Sarun",
     "job": "Tester"
 }
+
+putRequest1 = {
+    "name": "Duce",
+    "job": "Automation Engineer"
+}

@@ -27,6 +27,16 @@ class makeService(unittest.TestCase):
         resp2 = requests.post(configuration.BASE_URL+"api/users?",data=req1.postRequest2)
         print(resp2.json())
 
+    def test_putReq(self):
+        print("PUT**********REQUEST")
+        resp3 = requests.put(configuration.BASE_URL+"api/users?",data=req1.putRequest1)
+        print(resp3.json())
+
+    def test_deletReq(self):
+        print("DELET**********REQUEST")
+        resp4 = requests.delete(configuration.BASE_URL+"api/users?",params=operations.deleteParam)
+        print(resp4.json())
+
 
 if __name__ == '__main__':
     unittest.main
