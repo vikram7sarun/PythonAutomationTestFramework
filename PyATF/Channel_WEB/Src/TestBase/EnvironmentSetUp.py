@@ -3,12 +3,8 @@ __author__ = 'Vikram C'
 import unittest
 import datetime
 from selenium import webdriver
-import time
-from Channel_WEB.Src.PageObject.Pages import LoginPage
-from Channel_WEB.Src.PageObject.Pages import LandingPage
 
 class EnvironmentSetup(unittest.TestCase):
-
 
 #setUP contains the browser setup attributes
     def setUp(self):
@@ -18,17 +14,6 @@ class EnvironmentSetup(unittest.TestCase):
         print("------------------------------------------------------------------")
         self.driver.implicitly_wait(20)
         self.driver.maximize_window()
-
-    def test_login_valid(self):
-        driver = self.driver
-        driver.get("https://opensource-demo.orangehrmlive.com/")
-        time.sleep(3)
-
-        logint = LoginPage(driver)
-
-
-
-
 
 #tearDown method just to close all the browser instances and then quit
     def tearDown(self):
